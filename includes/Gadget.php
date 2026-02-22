@@ -535,11 +535,6 @@ class Gadget {
 	public function getValidationWarnings(): array {
 		$warnings = [];
 
-		// Default gadget requiring ES6
-		if ( $this->onByDefault && $this->requiresES6 ) {
-			$warnings[] = "gadgets-validate-es6default";
-		}
-
 		// Gadget containing files with uncrecognised suffixes
 		if ( count( array_diff( $this->pages, $this->getScriptsAndStyles() ) ) !== 0 ) {
 			$warnings[] = "gadgets-validate-unknownpages";
