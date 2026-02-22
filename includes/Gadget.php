@@ -369,7 +369,7 @@ class Gadget {
 	 * @return bool Whether this gadget requires ES6
 	 */
 	public function requiresES6(): bool {
-		return $this->requiresES6 && !$this->onByDefault;
+		return $this->requiresES6;
 	}
 
 	/**
